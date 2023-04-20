@@ -1,14 +1,27 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "../Navbar/Navbar.css"
 import logo from "../../assets/logo.svg"
 
 function Navbar(){
+
+    useEffect(() => {
+        const navLinks = document.querySelectorAll('.navbar-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.forEach(otherLink => otherLink.classList.remove('active'));
+                link.classList.add('active');
+            });
+        });
+    }, []);
+
     return(
         <div className="container-navbar">
+            <img src={logo} alt="logo du site" />
+            <span class="material-symbols-outlined">menu</span>
 
+          <div className="navbar-global">
             <ul className="navbar-sections">
-                <li><img src={logo} alt="logo du site" /></li>
-                <li className="navbar-link">Home</li>
+                <li className="navbar-link active">Home</li>
                 <li className="navbar-link">TV</li>
                 <li className="navbar-link">EPG</li>
                 <li className="navbar-link">Catchup</li>
@@ -28,6 +41,7 @@ function Navbar(){
                     </select>
                 </li>
             </ul>
+        </div>
 
         </div>
     )

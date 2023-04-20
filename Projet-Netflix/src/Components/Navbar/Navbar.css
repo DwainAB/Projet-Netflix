@@ -1,6 +1,17 @@
+.container-navbar>span{
+    display: none;
+}
+
+.container-navbar>img{
+    width: 55px;
+    margin-right: 30px;
+}
+
 li{
     list-style: none;
     font-weight: 600;
+    cursor: pointer;
+    font-size: 1.125rem;
 }
 
 ul{
@@ -9,8 +20,7 @@ ul{
 }
 
 .navbar-sections{
-    border: 2px solid blue;
-    width: 50%;
+    width: 800px;
     display: flex;
     justify-content: space-between;
     padding: 0;
@@ -22,20 +32,102 @@ ul{
 
 .container-navbar{
     display: flex;
-    justify-content: space-between;
-    border: 2px solid red;
     padding-left: 90px;
     padding-right: 90px;
+    height: 151px;
+    background: linear-gradient(170.78deg, #FFFFFF -167.63%, #6D6D6D -91.69%, rgba(17, 16, 29, 0) 106.06%);
+    backdrop-filter: blur(5px);
+}
+
+.navbar-global{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .navbar-general{
-    width: 10%;
+    width: 160px;
     display: flex;
     justify-content: space-between;
-    border: 2px solid green;
 }
 
 .general-item{
     color: white;
 }
 
+.active{
+    color : white;
+    border-bottom: 2px solid white;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: linear-gradient(153.47deg, rgba(255, 255, 255, 0) -341.94%, #14101D 95.11%);
+    color: white;
+    background-position: right center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    padding: 5px;
+    width: 52px;
+    height: 52px;
+    position: relative; 
+    font-size: 1.125rem;
+    text-align: center;
+    box-shadow: 0px 20px 100px -10px #42475B1A;
+    border: 0px;
+  }
+  
+  select option{
+    background-color: black;
+    color: white;
+    width: 200px;
+  }
+
+  select option:checked {
+    background-color: #cccccc; /* Changez la couleur de fond selon vos préférences */
+    color: #ffffff; /* Changez la couleur du texte selon vos préférences */
+    font-weight: bold; /* Ajoutez du gras pour améliorer la visibilité */
+    border: none; /* Supprimez la bordure pour un meilleur aspect */
+  }
+
+  select option:hover {
+    background-color: #fff;
+    color: #000;
+    outline: none;
+  }
+  
+  @media (max-width: 1024px) {
+   
+    .navbar-sections{
+        display: none;
+    }
+
+    .navbar-general{
+        display: none;
+    }
+
+    .container-navbar{
+        align-items: center;
+    }
+
+    .container-navbar>span{
+        color: white;
+        display: block;
+        font-size: 2rem;
+        margin-left: 80%;
+    }
+  }
+
+  @media (max-width: 468px) {
+
+    .container-navbar{
+        padding-left: 30px;
+    }
+
+
+  }
+  
+  
+  

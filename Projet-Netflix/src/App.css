@@ -11,3 +11,13 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+body{
+    margin: 0;
+}
+
+@media (max-width: 468px) {
+   
+    .global{
+        margin:0 0;    }
+  }
