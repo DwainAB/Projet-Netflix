@@ -6,18 +6,21 @@ function Navbar(){
 
     useEffect(() => {
         const navLinks = document.querySelectorAll('.navbar-link');
+        
         navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.forEach(otherLink => otherLink.classList.remove('active'));
-                link.classList.add('active');
-            });
+          link.addEventListener('click', () => {
+            navLinks.forEach(otherLink => otherLink.classList.remove('active'));
+            link.classList.add('active');
+          });
         });
-    }, []);
+      
+      }, []);
 
     return(
         <div className="container-navbar">
             <img src={logo} alt="logo du site" />
-            <span class="material-symbols-outlined">menu</span>
+            <input id="checkbox" class="menu-trigger-input" type="checkbox" />
+			<label for="checkbox" class="menu-trigger" ><span class="material-symbols-outlined">menu</span></label>
 
           <div className="navbar-global">
             <ul className="navbar-sections">
