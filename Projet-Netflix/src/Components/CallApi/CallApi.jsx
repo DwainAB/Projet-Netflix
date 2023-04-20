@@ -13,7 +13,7 @@ function CallApi(){
         getData(url)
       }, [])
 
-      console.log(userData);
+      console.log(userData.title);
 }
 
 export default CallApi

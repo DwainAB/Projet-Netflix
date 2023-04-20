@@ -1,10 +1,16 @@
 import React from 'react';
+import Header from "../Components/Header/Header"
+import CallApi from '../Components/CallApi/CallApi';
 
 
 function Home(){
  
     return (
-        <h1>Home</h1>
+        <div>
+                    <Header/>
+        <CallApi/>
+        </div>
+
     )
 }
 
