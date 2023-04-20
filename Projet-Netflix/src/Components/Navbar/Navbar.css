@@ -1,14 +1,41 @@
 li{
     list-style: none;
-    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
 }
 
 ul{
     display: flex;
+    align-items: center;
+}
+
+.navbar-sections{
+    border: 2px solid blue;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+
+.navbar-link{
+    color: #808080;
 }
 
 .container-navbar{
     display: flex;
     justify-content: space-between;
     border: 2px solid red;
+    padding-left: 90px;
+    padding-right: 90px;
 }
+
+.navbar-general{
+    width: 10%;
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid green;
+}
+
+.general-item{
+    color: white;
+}
+

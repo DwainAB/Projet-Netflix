@@ -4,19 +4,20 @@ import FilmSelected from "./Pages/FilmSelected"
 import Error from "./Pages/Error"
 import Navbar from "./Components/Navbar/Navbar"
 import Footer from "./Components/Footer/Footer"
+import "../src/App.css"
 
 function App(){
 	return (
     <BrowserRouter>
     <div className="app">
+      <Navbar/>
       <div className="global"> 
-        <Navbar/>
         <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/FilmSelected" element={<FilmSelected/>}/>
           <Route path="*" element={<Error/>}/>
         </Routes>
-        </div>
+      </div>
         <Footer/>
     </div>
     </BrowserRouter>

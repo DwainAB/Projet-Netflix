@@ -1,0 +1,13 @@
+.global{
+    margin: 0 90px;
+}
+
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    background: url("../src/assets/Fond.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
