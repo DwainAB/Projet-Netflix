@@ -25,7 +25,8 @@ function App(){
 	return (
     
     <BrowserRouter>
-    {movies.map((movieReq)=><MovieBox/>)}
+    {movies.map((movieReq)=>
+    <MovieBox key={movieReq.id} {...movieReq}/>)}
     <div className="app">
       <Navbar/>
       <div className="global"> 
