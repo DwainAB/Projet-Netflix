@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from "../Components/Header/Header"
 import MovieBox from "../Components/MovieBox/MovieBox"
+import Channels from '../Components/Channels/Channels';
 
 
 
@@ -10,6 +11,7 @@ function Home(){
         <div>
             <Header/>
             <MovieBox/>
+            <Channels/>
             
         </div>
 
