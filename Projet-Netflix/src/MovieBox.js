@@ -1,13 +1,31 @@
-import React from "react";
-const API_IMG="https://image.tmdb.org/t/p/w500/";
+import React, {useState, useEffect} from "react";
+import { tmdbService } from "./Components/CallApi/CallApi";
+import { Link } from "react-router-dom";
+import { API_IMG } from "./Components/CallApi/Config";
 
-const MovieBox = ({title, poster_path, vote_average, release_date, overview})=>{
+
+
+const MovieBox = ()=>{
+
+    const [movies, setMovies] = useState([]);
+
+    useEffect(() => {
+      tmdbService.getKidsMovies()
+        .then(response => {
+          setMovies(response.data.results);
+        })
+        .catch(error => {
+          console.log(error);
+        });
+    }, []);
+
+    
     return(
         <div>
-            <h1>{title}</h1>
-            <img src={API_IMG+poster_path} alt="poster" />
-            <p>{overview}</p>
-            <p>{release_date}</p>
+            <h1>{movies[1].title}</h1>
+            <p>{movies[1].overview}</p>
+          
+            
         </div>
     )
 }
