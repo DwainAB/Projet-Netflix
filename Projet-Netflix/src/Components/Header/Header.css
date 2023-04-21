@@ -11,6 +11,16 @@
     object-fit: cover;
 }
 
+.shadow{
+    position: absolute;
+    width: 100%;
+    z-index: -14;
+    left: 0;
+    height: 830px;
+    background-color: black;
+    opacity: 0.7;
+}
+
 .container_header{
     height: 830px;
 }
@@ -24,6 +34,7 @@
     background: linear-gradient(153.47deg, rgba(255, 255, 255, 0) -341.94%, #14101D 95.11%);
     padding: 7px;
     border-radius: 8px;
+    cursor: default;
 }
 
 .header_tags{
@@ -41,18 +52,96 @@
 .film_watching{
     display: flex;
     justify-content: space-between;
+    overflow-x: auto;
 }
 
 .list_film_watching{
-    height: 260px;
-    margin-top: 150px;
+    height: auto;
+    margin-top: 80px;
+    overflow-y: hidden;
 }
 
 .movie img{
     height: 200px;
     border-radius: 10px;
+    margin-right: 20px;
 }
 
 .list_film_title{
     font-size: 1.5rem;
+}
+
+.background_header_mobile{
+    display: none;
+}
+
+.btn_info{
+    width: 530px;
+    display: flex;
+}
+
+.btn_info a:nth-child(1){
+    background: linear-gradient(77deg, rgba(31,142,190,1) 0%, rgba(68,4,149,1) 39%, rgba(68,4,149,1) 68%, rgba(177,2,205,1) 96%);
+    margin-right: 50px;
+}
+
+.btn_info a:nth-child(2){
+    background: linear-gradient(153.47deg, rgba(255, 255, 255, 0) -341.94%, #14101D 95.11%);
+}
+
+.btn{
+    width: 8.438rem;
+    height: 3.25rem;
+    border-radius: 10px;
+    font-size: 1.25rem;
+    text-decoration: none;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 730px) {
+    .background_header_mobile{
+        display: block;
+        position: absolute;
+        width: 100%;
+        z-index: -15;
+        left: 0;
+        height: 800px;
+        object-fit: cover;
+    }
+
+    .background_header{
+        display: none;
+    }
+
+    .header_info{
+        width: 80%;
+        padding: 20px;
+    }
+
+    .shadow{
+        position: absolute;
+        width: 100%;
+        z-index: -15;
+        left: 0;
+        height: 800px;
+        background-color: black;
+        opacity: 0.7;
+    }
+
+    .list_film_watching{
+        margin-top: 0;
+        margin-left: 20px;
+    }
+
+    .container_header{
+        height: 800px;
+    }
+
+    .btn_info{
+        margin-left: 20px;
+    }
+
 }

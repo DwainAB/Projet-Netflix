@@ -3,6 +3,8 @@ import { tmdbService } from "../CallApi/CallApi";
 import { API_IMG } from "../CallApi/Config";
 import "../Header/Header.css";
 
+
+
 function DisplayData() {
   const [movies, setMovies] = useState([]);
 
@@ -36,11 +38,9 @@ function DisplayData() {
     <div className="container_header">
       {movies.length ? (
         <>
-          <img
-            className="background_header"
-            src={API_IMG + movies[16].backdrop_path}
-            alt=""
-          />
+          <img className="background_header_mobile" src={API_IMG + movies[16].poster_path}alt=""/>
+          <div className="shadow"></div>
+          <img className="background_header" src={API_IMG + movies[16].backdrop_path}alt=""/>
           <div className="header_info">
             <h1 className="header_title">{movies[16].title}</h1>
             <ul className="header_tags">
@@ -49,6 +49,11 @@ function DisplayData() {
               <li className="tag">{movies[16].original_language}</li>
             </ul>
             <p className="header_description">{movies[16].overview}</p>
+          </div>
+
+          <div className="btn_info">
+            <a className="btn" href="/">Play</a>
+			<a className="btn" href="/">Details</a>
           </div>
 
           <div className="list_film_watching">
