@@ -7,6 +7,7 @@ const MovieBox = ({title, poster_path, vote_average, release_date, overview})=>{
             <h1>{title}</h1>
             <img src={API_IMG+poster_path} alt="poster" />
             <p>{overview}</p>
+            <p>{release_date}</p>
         </div>
     )
 }
