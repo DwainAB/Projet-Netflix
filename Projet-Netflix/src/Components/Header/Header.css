@@ -1,0 +1,58 @@
+*{
+    color: white;
+}
+
+.background_header{
+    position: absolute;
+    width: 100%;
+    z-index: -15;
+    left: 0;
+    height: 830px;
+    object-fit: cover;
+}
+
+.container_header{
+    height: 830px;
+}
+
+.header_title{
+    font-size: 2.5em;
+}
+
+.tag{
+    font-size: 0.75rem;
+    background: linear-gradient(153.47deg, rgba(255, 255, 255, 0) -341.94%, #14101D 95.11%);
+    padding: 7px;
+    border-radius: 8px;
+}
+
+.header_tags{
+    width: 200px;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+}
+
+.header_info{
+    width: 530px;
+    padding-top: 150px;
+}
+
+.film_watching{
+    display: flex;
+    justify-content: space-between;
+}
+
+.list_film_watching{
+    height: 260px;
+    margin-top: 150px;
+}
+
+.movie img{
+    height: 200px;
+    border-radius: 10px;
+}
+
+.list_film_title{
+    font-size: 1.5rem;
+}

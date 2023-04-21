@@ -11,10 +11,10 @@ export const tmdbService = {
     return axios.get(`${baseUrl}/search/movie?api_key=${API_KEY}&language=fr-FR&query=${query}`);
   },
   getPopularMovies: () => {
-    return axios.get(`${baseUrl}/movie/popular?api_key=${API_KEY}&language=fr-FR`);
+    return axios.get(`${baseUrl}/discover/movie?sort_by=popularity.desc&api_key=${API_KEY}`);
   },
   getKidsMovies: () => {
-    return axios.get(`${baseUrl}/discover/movie?api_key=${API_KEY}&language=fr-FR&certification_country=US&certification.lte=G&sort_by=popularity.desc`);
+    return axios.get(`${baseUrl}/discover/movie?certification_country=US&certification.lte=G&sort_by=popularity.desc`);
   },
  
 };

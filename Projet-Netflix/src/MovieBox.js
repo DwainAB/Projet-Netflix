@@ -22,9 +22,7 @@ const MovieBox = ()=>{
     
     return(
         <div>
-            <h1>{movies[1].title}</h1>
-            <p>{movies[1].overview}</p>
-          
+            
             
         </div>
     )
