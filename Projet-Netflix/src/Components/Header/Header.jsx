@@ -1,17 +1,12 @@
-import React, {useEffect} from 'react';
-import CallApi from '../CallApi/CallApi.jsx';
+import React from 'react';
 
-function DisplayData() {
-    useEffect(() => {
-        console.log(CallApi.userData);
-      }, []);
-    
-      return (
+
+function DisplayData({title}) {
+    return(
         <div>
-          <h1>Données récupérées depuis l'API :</h1>
-          <p>{CallApi.userData ? JSON.stringify(CallApi.userData) : 'En attente de données...'}</p>
+            <h1>{title}</h1>
         </div>
-      );
+    )
 }
 
 export default DisplayData;
