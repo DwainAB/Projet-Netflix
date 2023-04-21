@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
-import { tmdbService } from "./Components/CallApi/CallApi";
+import { tmdbService } from "../CallApi/CallApi";
 import { Link } from "react-router-dom";
-import { API_IMG } from "./Components/CallApi/Config";
+import { API_IMG } from "../CallApi/Config";
 
 
 

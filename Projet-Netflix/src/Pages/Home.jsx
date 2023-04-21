@@ -1,7 +1,6 @@
 import React from 'react';
 import Header from "../Components/Header/Header"
-import CallApi from '../Components/CallApi/CallApi';
-import MovieBox from "../MovieBox.js"
+import MovieBox from "../Components/MovieBox/MovieBox"
 
 
 
