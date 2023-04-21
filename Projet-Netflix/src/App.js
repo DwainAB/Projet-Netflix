@@ -6,6 +6,7 @@ import Navbar from "./Components/Navbar/Navbar"
 import Footer from "./Components/Footer/Footer"
 import "../src/App.css"
 import React,{ useEffect, useState } from "react"
+import Channels from "./Components/Channels/Channels"
 
 
 function App(){
@@ -24,6 +25,7 @@ function App(){
           <Route path="*" element={<Error/>}/>
         </Routes>
       </div>
+      <Channels/>
         <Footer/>
     </div>
     </BrowserRouter>
