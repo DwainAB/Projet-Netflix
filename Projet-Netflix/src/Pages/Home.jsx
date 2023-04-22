@@ -10,8 +10,11 @@ function Home(){
     return (
         <div>
             <Header/>
-            <MovieBox/>
             <Channels/>
+<<<<<<< HEAD
+            <MovieBox/>
+=======
+>>>>>>> 8da7edebdb73b4d617901cdf93e757d41490818d
         </div>
 
     )

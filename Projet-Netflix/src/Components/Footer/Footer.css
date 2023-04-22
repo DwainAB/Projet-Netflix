@@ -65,7 +65,7 @@ background: linear-gradient(77deg, rgba(52,48,69,1) 0%, rgba(192,183,232,1) 35%,
     transition: all 300ms ease;
   }
 
-  button{
+  .button-footer{
     margin-bottom: 10px !important;
     padding: 20px;
     font-family: 'Montserrat';
@@ -82,7 +82,7 @@ background: linear-gradient(77deg, rgba(52,48,69,1) 0%, rgba(192,183,232,1) 35%,
   .footer-separators{
     background: rgb(52,48,69);
     background: linear-gradient(77deg, rgba(52,48,69,1) 0%, rgba(192,183,224,1) 35%, rgba(129,118,175,1) 68%, rgba(52,48,69,1) 100%);
-    width: 1315px;
+    max-width: 100%;
     height: 1px;
     margin-top: 80px;
     margin-left: 90px;
@@ -103,7 +103,7 @@ background: linear-gradient(77deg, rgba(52,48,69,1) 0%, rgba(192,183,232,1) 35%,
 
   /* button */
 
-  button:hover{
+  .button-footer:hover{
     transform: scale(1.1);
     background: rgb(31,142,190);
     background: linear-gradient(77deg, rgba(31,142,190,1) 0%, rgba(68,4,149,1) 39%, rgba(68,4,149,1) 68%, rgba(177,2,205,1) 96%);

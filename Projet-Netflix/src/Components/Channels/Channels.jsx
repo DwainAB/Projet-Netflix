@@ -2,10 +2,13 @@ import React from "react";
 import JobBiden from '../../assets/live-now-img1.png'
 import DonaldTrump from '../../assets/live-now-img2.png'
 import './Channels.css'
+import { AiOutlineArrowRight } from 'react-icons/fa';
+import TF1 from '../../assets/featured-img1.png'
 
 function Channels(){
     return(
-        <div className="Container">
+        <div className="Container-live-now">
+            <h2>Live Now</h2>
             <div className="live-now">
 
                 {/* la partie gauche de live now  */}
@@ -14,25 +17,81 @@ function Channels(){
                         <img src={JobBiden} alt="" />
                     </div>
                     <div className="live-now-left-info">
-                        <h3>5. CNN</h3>
-                        <h2>NEWS</h2>
-                        <p>Right now, as we speak, Joe Biden, the current President of the United States, is delivering an important and insightful </p>
-                        <button className="live-now-left-info-button">
-                            Go Live
-                        </button>
+                        <div className="live-now-left-info-text">
+                            <p>5. CNN</p>
+                            <p>NEWS</p>
+                            <p>Right now, as we speak, Joe Biden, <br />
+                            the current President of the United States,<br />
+                            is delivering an important and insightful </p>
+                        </div>
+                        <div className="live-now-left-info-div-button">
+                            <button className="live-now-left-info-button">
+                                Go Live
+                            </button>
+                        </div>
                     </div>
                 </div>
 
                 {/* le separateur entre la partie droite et la partie gauche de live now  */}
-                <div class="footer-separator"></div>
-                
+                <div class="footer-separator-g">
+                    <div className="footer-separator-1"></div>
+                    <span className="arrow_right_alt" class="material-symbols-outlined">arrow_right_alt</span>
+                    <div className="footer-separator-2"></div>
+                </div>
+
                 {/* la partie droite de live now  */}
                 <div className="live-now-right">
                     <div className="live-now-right-img">
-                        <img src={DonaldTrump} alt="" />
+                        <img className="live-now-right-img-img" src={DonaldTrump} alt="" />
                     </div>
                 </div>
             </div>
+
+
+
+            {/* Featured TV channels */}
+            <div className="featured-general">
+                <h2 className="featured-general-title">Featured TV channels</h2>
+                <div className="featured-general-box-g">
+
+
+                    <div className="featured-general-box1">
+                        <div className="featured-general-box1-img">
+                            <img src={TF1} alt="" />
+                        </div>
+                        <div className="featured-general-box1-info">
+                            <p>1. TF1</p>
+                            <p>The Newspaper</p>
+                            <p>12 - 12h30</p>
+                        </div>
+                    </div>
+
+                    <div className="featured-general-box1">
+                        <div className="featured-general-box1-img">
+                            <img src={TF1} alt="" />
+                        </div>
+                        <div className="featured-general-box1-info">
+                            <p>1. TF1</p>
+                            <p>The Newspaper</p>
+                            <p>12 - 12h30</p>
+                        </div>
+                    </div>
+
+                    <div className="featured-general-box1">
+                        <div className="featured-general-box1-img">
+                            <img src={TF1} alt="" />
+                        </div>
+                        <div className="featured-general-box1-info">
+                            <p>1. TF1</p>
+                            <p>The Newspaper</p>
+                            <p>12 - 12h30</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
         </div>
     )
 }
