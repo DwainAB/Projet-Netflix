@@ -1,9 +1,31 @@
 .container_filmInfo{
     display: flex;
+    height: 700px;
+}
+
+.background_filmInfo {
+    position: absolute;
+    z-index: -15;
+    left: 0;
+    height: 700px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.shadow_filmInfo{
+    position: absolute;
+    z-index: -10;
+    left: 0;
+    height: 700px;
+    object-fit: cover;
+    background-color: black;
+    opacity: 0.6;
+    width: 100%;
 }
 
 .container_img_filmInfo{
     width: 35%;
+    padding-top: 40px;
 }
 
 .img_filmInfo{
@@ -14,6 +36,7 @@
 
 .container_info_filmInfo{
     width: 50%;
+    padding-top: 40px;
 }
 
 .info_filmInfo{

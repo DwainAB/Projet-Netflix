@@ -20,11 +20,17 @@ function FilmInfo(){
         console.log(searchObject);
         filmElement = (
             <div className="container_filmInfo">
+
+                <img className="background_filmInfo" src={API_IMG+searchObject.backdrop_path} alt="" />
+                <div className="shadow_filmInfo"></div>
                <div className="container_img_filmInfo">
                     <img className="img_filmInfo" src={API_IMG+searchObject.poster_path} alt="" />
                </div>
+
                <div className="container_info_filmInfo">
+
                   <div className="info_filmInfo">
+
                     <div className="btns">
                         <Link className="btn" to="/">Play</Link>
                         <Link className="btn" to="/">Details</Link>
@@ -32,13 +38,17 @@ function FilmInfo(){
                     </div>
                         
                         <h1 className="info_filmInfo_title">{searchObject.title}</h1>
+
                         <div className="info_filmInfo_tags">
                             <li className="info_filmInfo_tag">{searchObject.release_date}</li>
                             <li className="info_filmInfo_tag">{searchObject.vote_average}</li>
                             <li className="info_filmInfo_tag">{searchObject.original_language}</li>
                         </div>
+
                         <p className="info_filmInfo_text">{searchObject.overview}</p>
+
                     </div>
+
                     <div className="container_info_distribution">
 
                     </div>

@@ -19,5 +19,8 @@ export const tmdbService = {
   getAdventureActionMovies: () => {
     return axios.get(`${baseUrl}/discover/movie?api_key=${API_KEY}&with_genres=12,28`);
   },
+  getHorrorMovies: () => {
+    return axios.get(`${baseUrl}/discover/movie?api_key=${API_KEY}&with_genres=27`);
+  }
  
 };
