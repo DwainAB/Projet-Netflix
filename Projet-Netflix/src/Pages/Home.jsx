@@ -12,7 +12,6 @@ function Home(){
             <Header/>
             <MovieBox/>
             <Channels/>
-            
         </div>
 
     )
