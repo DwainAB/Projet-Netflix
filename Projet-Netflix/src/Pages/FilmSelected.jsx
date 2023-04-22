@@ -1,8 +1,11 @@
 import React from "react";
+import FilmInfo from "../Components/FilmInfo/FilmInfo";
 
 function FilmSelected(){
     return (
-        <h1>FilmSelected</h1>
+        <div>
+            <FilmInfo/>
+        </div>
     )
 }
 

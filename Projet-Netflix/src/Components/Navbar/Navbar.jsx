@@ -24,14 +24,14 @@ function Navbar(){
 
           <div className="navbar-global">
             <ul className="navbar-sections">
-                <li className="navbar-link active">Home</li>
-                <li className="navbar-link">TV</li>
-                <li className="navbar-link">EPG</li>
-                <li className="navbar-link">Catchup</li>
-                <li className="navbar-link">Movies</li>
-                <li className="navbar-link">TV-Shows</li>
-                <li className="navbar-link">Library</li>
-                <li className="navbar-link">Setting</li>
+                <li className="navbar-link active"><a href="/">Home</a></li>
+                <li className="navbar-link"><a href="/">TV</a></li>
+                <li className="navbar-link"><a href="/">EPG</a></li>
+                <li className="navbar-link"><a href="/">Catchup</a></li>
+                <li className="navbar-link"><a href="/">Movies</a></li>
+                <li className="navbar-link"><a href="/">TV-Shows</a></li>
+                <li className="navbar-link"><a href="/">Library</a></li>
+                <li className="navbar-link"><a href="/">Setting</a></li>
             </ul>
         
             <ul className="navbar-general">

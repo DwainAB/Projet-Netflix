@@ -15,8 +15,8 @@ function WebsiteAdvantage(){
                 </div>
                 <div className="advantage_card">
                     <div className="card">
-                        <div><img className="card_img" src={img_content} alt="" /></div>
-                        <div>
+                        <div className="container_card_img"><img className="card_img" src={img_content} alt="" /></div>
+                        <div className="container_text_card">
                             <h2 className="card_title">Content</h2>
                             <p className="card_text">Discover a vast library of popular movies, TV shows, and exclusive original series only available on our streaming site.</p>
                             <a className="card_btn" href="/">DETAILS</a>
@@ -24,8 +24,8 @@ function WebsiteAdvantage(){
                        
                     </div>
                     <div className="card">
-                        <div><img className="card_img" src={img_interface} alt="" /></div>
-                        <div>
+                        <div className="container_card_img"><img className="card_img" src={img_interface} alt="" /></div>
+                        <div className="container_text_card">
                             <h2 className="card_title">Interface</h2>
                             <p className="card_text">Easily find and watch your favorite content with our intuitive and user-friendly interface</p>
                             <a className="card_btn" href="/">DETAILS</a>
@@ -33,16 +33,16 @@ function WebsiteAdvantage(){
                         
                     </div>
                     <div className="card">
-                        <div><img className="card_img" src={img_access} alt="" /></div>
-                        <div>
+                        <div className="container_card_img"><img className="card_img" src={img_access} alt="" /></div>
+                        <div className="container_text_card">
                             <h2 className="card_title">Accessibility</h2>
                             <p className="card_text">Enjoy seamless streaming on any device, including computers, mobile phones, and tablets, for an unparalleled streaming </p>
                             <a className="card_btn" href="/">DETAILS</a>
                         </div>
                     </div>
                     <div className="card">
-                        <div><img className="card_img" src={img_exceptional} alt="" /></div>
-                        <div>
+                        <div className="container_card_img"><img className="card_img" src={img_exceptional} alt="" /></div>
+                        <div className="container_text_card">
                             <h2 className="card_title">Exceptional</h2>
                             <p className="card_text">Personalized recommendations based on your viewing habits, organized playlists and collections by genre and mood</p>
                             <a className="card_btn" href="/">DETAILS</a>
