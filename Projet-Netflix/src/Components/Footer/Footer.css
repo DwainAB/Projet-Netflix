@@ -118,4 +118,26 @@ background: linear-gradient(77deg, rgba(52,48,69,1) 0%, rgba(192,183,232,1) 35%,
     transform: scale(1.1);
   }
 
+  @media (max-width: 1300px) {
+    .footer-container{
+      display: flex;
+      flex-direction: column;
+      margin: 40px;
+    }
+    .footer-separator{
+      transform: rotate(90deg);
+      margin: 0px;
+    }
+    img{
+      transform: scale(0.6);
+    }
+    .footer-section.margin{
+      margin: 0px!important;
+    }
+    .footer-separators-text{
+      text-align: center;
+    }
+  
+  }
+
   
