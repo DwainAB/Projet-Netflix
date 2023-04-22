@@ -11,7 +11,11 @@ function Home(){
         <div>
             <Header/>
             <Channels/>
+<<<<<<< HEAD
             <MovieBox/>
+=======
+            
+>>>>>>> 8da7edebdb73b4d617901cdf93e757d41490818d
         </div>
 
     )
