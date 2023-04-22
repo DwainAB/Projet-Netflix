@@ -16,5 +16,8 @@ export const tmdbService = {
   getKidsMovies: () => {
     return axios.get(`${baseUrl}/discover/movie?certification_country=US&certification.lte=G&sort_by=popularity.desc`);
   },
+  getAdventureActionMovies: () => {
+    return axios.get(`${baseUrl}/discover/movie?api_key=${API_KEY}&with_genres=12,28`);
+  },
  
 };

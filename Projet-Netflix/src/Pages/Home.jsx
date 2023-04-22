@@ -10,8 +10,8 @@ function Home(){
     return (
         <div>
             <Header/>
-            <MovieBox/>
             <Channels/>
+            <MovieBox/>
         </div>
 
     )

@@ -46,7 +46,7 @@ function Footer(){
         <FaInstagram color="#C0B7E8"/>
         <FaPinterest color="#C0B7E8"/>
       </div>
-      <button>
+      <button className="button-footer">
         LET'S START ADVENTURE
       </button>
     </div>
