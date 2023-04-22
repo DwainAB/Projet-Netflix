@@ -35,7 +35,7 @@
 }
 
 .container_info_filmInfo{
-    width: 50%;
+    width: 60%;
     padding-top: 40px;
 }
 
@@ -55,10 +55,6 @@
 
 .btns a:nth-child(2){
     background: linear-gradient(153.47deg, rgba(255, 255, 255, 0) -341.94%, #14101D 95.11%);
-}
-
-.btn{
-
 }
 
 .info_filmInfo_heart{
@@ -91,4 +87,82 @@
     font-size: 1rem;
     font-weight: 600;
 }
-.container_info_distribution{}
+
+
+@media (max-width: 1580px){
+
+    .container_img_filmInfo{
+        margin-right: 5%;
+    }
+}
+
+@media (max-width: 1350px){
+
+    .container_img_filmInfo{
+        margin-right: 10%;
+    }
+}
+
+@media (max-width: 1215px){
+
+    .container_img_filmInfo{
+        margin-right: 15%;
+    }
+}
+@media (max-width: 1100px){
+
+    .container_filmInfo{
+        flex-direction: column;
+        align-items: center;
+        text-align: center
+    }
+
+    .img_filmInfo{
+        width: 200px;
+        height: 200px;
+    }
+
+    .info_filmInfo_tags{
+        width: auto;
+    }
+
+    .btns{
+        justify-content: space-around;
+    }
+
+    .container_img_filmInfo{
+        margin: 0;
+    }
+
+    .info_filmInfo{
+        width: 100%;
+    }
+}
+
+@media (max-width:1000px) {
+    .background_filmInfo{
+        height: 750px;
+    }
+
+    .shadow_filmInfo{
+        height: 750px;
+    }
+
+    .list_film_watching{
+        margin-top: 50px!important;
+    }
+
+    .container_info_filmInfo{
+        width: 70%;
+    }
+}
+
+@media (max-width:510px) {
+    .container_info_filmInfo{
+        width: 80%;
+    }
+
+    .container_img_filmInfo{
+        width:80%
+    }
+}
