@@ -4,6 +4,8 @@ import DonaldTrump from '../../assets/live-now-img2.png'
 import './Channels.css'
 import { AiOutlineArrowRight } from 'react-icons/fa';
 import TF1 from '../../assets/featured-img1.png'
+import M6 from '../../assets/featured-img-2.png'
+import CNN from '../../assets/featured-img3.png'
 
 function Channels(){
     return(
@@ -62,29 +64,29 @@ function Channels(){
                         <div className="featured-general-box1-info">
                             <p>1. TF1</p>
                             <p>The Newspaper</p>
-                            <p>12 - 12h30</p>
+                            <p>12h - 12h30</p>
                         </div>
                     </div>
 
                     <div className="featured-general-box1">
                         <div className="featured-general-box1-img">
-                            <img src={TF1} alt="" />
+                            <img className="M6" src={M6} alt="" />
                         </div>
                         <div className="featured-general-box1-info">
-                            <p>1. TF1</p>
-                            <p>The Newspaper</p>
-                            <p>12 - 12h30</p>
+                            <p>1. M6</p>
+                            <p>The Titanic</p>
+                            <p>18h30 - 21h15</p>
                         </div>
                     </div>
 
                     <div className="featured-general-box1">
                         <div className="featured-general-box1-img">
-                            <img src={TF1} alt="" />
+                            <img className="CNN" src={CNN} alt="" />
                         </div>
                         <div className="featured-general-box1-info">
-                            <p>1. TF1</p>
-                            <p>The Newspaper</p>
-                            <p>12 - 12h30</p>
+                            <p>1. CNN</p>
+                            <p>Donald Trump</p>
+                            <p>10h15 - 11h25</p>
                         </div>
                     </div>
 

@@ -76,7 +76,8 @@ background: linear-gradient(77deg, rgba(52,48,69,1) 0%, rgba(192,183,232,1) 35%,
     background: linear-gradient(90deg, #8176AF 0%, #C0B7E8 100%);
     border-radius: 40px;
     cursor: pointer;
-    transition: transforme all 400ms ease;
+    transition: transform 0.3s ease-in-out;
+    border: 0;
   }
 
   .footer-separators{

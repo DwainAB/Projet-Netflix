@@ -118,7 +118,6 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 40px;
 }
 
 .featured-general-box1{

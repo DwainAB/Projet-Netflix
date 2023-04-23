@@ -1,3 +1,7 @@
+.featured-tv{
+    margin-top: 45px;
+}
+
 .container-movie-box{
     display: flex;
     flex-direction: column;
@@ -8,6 +12,7 @@
     display: flex;
     justify-content: space-between;
     overflow-x: auto;
+    margin-top: 32px;
 }
 
 .container-movie-box h2{
@@ -20,3 +25,24 @@
     color: #FFFFFF;
 }
 
+.featured-tv-info-box-movies{
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.featured-tv-info-box-movies img{
+    width: 370px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.featured-tv-info-box{
+    margin-top: 32px;
+}
+
+.Adventures-films{
+    margin-top: 45px;
+    margin-bottom: 90px;
+}
