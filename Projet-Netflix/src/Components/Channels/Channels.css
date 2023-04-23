@@ -174,6 +174,14 @@
     color: #9C9C9C;
 }
 
+.M6{
+    padding: 20px 20px 20px 20px;
+}
+
+.featured-general-box1-img .M6{
+    padding: 0px 25px 5px 25px;
+}
+
 
 @media only screen and (max-width: 1300px) {
     .featured-general-box-g{

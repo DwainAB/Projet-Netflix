@@ -69,7 +69,7 @@ function Channels(){
                     </div>
 
                     <div className="featured-general-box1">
-                        <div className="featured-general-box1-img">
+                        <div className="featured-general-box1-img M6">
                             <img className="M6" src={M6} alt="" />
                         </div>
                         <div className="featured-general-box1-info">
