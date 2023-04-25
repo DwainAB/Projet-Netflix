@@ -104,6 +104,8 @@ useEffect(() => {
   };
 
 
+
+
     return(
       <div className="container-movie-box">
         {movies.length && movieserie.length ?(

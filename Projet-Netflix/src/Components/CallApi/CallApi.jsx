@@ -3,6 +3,7 @@ import { API_KEY } from '../CallApi/Config.jsx';
 
 const baseUrl = 'https://api.themoviedb.org/3';
 
+
 export const tmdbService = {
   getMovie: (id) => {
     return axios.get(`${baseUrl}/movie/${id}?api_key=${API_KEY}&language=fr-FR`);
@@ -32,3 +33,7 @@ export const tmdbService = {
   
  
 };
+
+
+
+
