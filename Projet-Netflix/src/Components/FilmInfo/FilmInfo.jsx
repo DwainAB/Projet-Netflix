@@ -45,7 +45,7 @@ function FilmInfo(){
     let filmElement = null;
 
     if (searchObject) {
-        console.log(searchObject);
+        
         filmElement = (
             <div className="container_filmInfo">
 

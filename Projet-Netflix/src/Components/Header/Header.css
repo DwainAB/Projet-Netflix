@@ -35,6 +35,7 @@
     padding: 7px;
     border-radius: 8px;
     cursor: default;
+    list-style: none;
 }
 
 .header_tags{

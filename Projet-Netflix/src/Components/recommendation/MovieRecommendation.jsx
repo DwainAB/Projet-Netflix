@@ -12,7 +12,6 @@ function MovieRecommendation(){
     tmdbService.getHorrorMovies()
       .then((response) => {
         setMovies(response.data.results);
-        console.log(response.data.results);
       })
       .catch((error) => {
         console.log(error);

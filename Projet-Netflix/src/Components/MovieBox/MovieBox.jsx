@@ -21,7 +21,6 @@ const MovieBox = ()=>{
     tmdbService.getAdventureActionMovies()
       .then((response) => {
         setMovies(response.data.results);
-        console.log(response.data.results);
       })
       .catch((error) => {
         console.log(error);
@@ -32,20 +31,16 @@ const MovieBox = ()=>{
     tmdbService.getPopularTVShows()
       .then((response) => {
         setmovieserie(response.data.results);
-        console.log(response.data.results);
       })
       .catch((error) => {
         console.log(error);
       });
   }, []);
-  console.log(movies);
-console.log(movieserie);
 
 useEffect(() => {
   tmdbService.getHistoryMovies()
     .then((response) => {
       setHistory(response.data.results);
-      console.log(response.data.results);
     })
     .catch((error) => {
       console.log(error);
