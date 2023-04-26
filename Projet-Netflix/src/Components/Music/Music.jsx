@@ -24,7 +24,6 @@ function Music (){
             </div>
 
             <div className="wrapper">
-                <div className="wrapper">
                     <div className="card-wrapper sadek">
                         <img src={sadek} alt="" />
                         <div className="info-wrapper sadek">
@@ -60,8 +59,8 @@ function Music (){
                             <a className="button-wrapper" href="">Play</a>
                         </div>
                     </div>
-                </div>
             </div>
+
 
         
         </div>

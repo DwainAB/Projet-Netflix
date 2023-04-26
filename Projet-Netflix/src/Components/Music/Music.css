@@ -240,3 +240,44 @@
     text-transform: capitalize;
     color: #FFFFFF;
 }
+
+@media (max-width: 900px) {
+    .Music-titles{
+        display: flex;
+        flex-direction: column;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 35px;
+    }
+    .card-wrapper{
+        height: 100%;
+        width: 60%;
+        box-sizing: border-box;
+        padding: 30px;
+        background: linear-gradient(144.39deg, #FFFFFF -278.56%, #6D6D6D -78.47%, #11101D 91.61%);
+        backdrop-filter: blur(5px);
+        border-radius: 20px;
+        align-items: center;
+    }
+    .x-Music-title{
+        display: none;
+    }
+    .card-wrapper.niro:before{
+        border-radius: 20px;
+    }
+    .card-wrapper.sch:before{
+        border-radius: 20px;
+    }
+    .card-wrapper.sadek:before{
+        border-radius: 20px;
+    }
+    .card-wrapper.sofiane:before{
+        border-radius: 20px;
+    }
+
+}
