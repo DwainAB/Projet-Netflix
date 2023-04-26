@@ -129,7 +129,7 @@ background: linear-gradient(77deg, rgba(52,48,69,1) 0%, rgba(192,183,232,1) 35%,
       transform: rotate(90deg);
       margin: 0px;
     }
-    img{
+    footer img{
       transform: scale(0.6);
     }
     .footer-section.margin{

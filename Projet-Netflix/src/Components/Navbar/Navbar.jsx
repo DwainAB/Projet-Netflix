@@ -35,9 +35,9 @@ function Navbar(){
             </ul>
         
             <ul className="navbar-general">
-                <li className="general-item"><span class="material-symbols-outlined">search</span></li>
-                <li className="general-item"><span class="material-symbols-outlined">notifications</span></li>
-                <li className="general-item">
+                <li className="navbar-link general-item"><span class="material-symbols-outlined">search</span></li>
+                <li className="navbar-link general-item"><span class="material-symbols-outlined">notifications</span></li>
+                <li className="navbar-link general-item">
                     <select name="languages" id="languages">
                         <option value="EN">EN</option>
                         <option value="FR">FR</option>

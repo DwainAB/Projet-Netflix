@@ -2,11 +2,11 @@
     display: none;
 }
 
-input{
+.menu-trigger-input{
     display: none;
 }
 
-label{
+.menu-trigger{
     display: none;
 }
 
@@ -15,14 +15,14 @@ label{
     margin-right: 30px;
 }
 
-li{
+.navbar-link{
     list-style: none;
     font-weight: 600;
     cursor: pointer;
     font-size: 1.125rem;
 }
 
-ul{
+.navbar-sections{
     display: flex;
     align-items: center;
 }
@@ -45,8 +45,6 @@ ul{
     height: 151px;
     background-image: linear-gradient(180deg, #2A2A2D 57.81%, rgba(17, 16, 29, 0) 93.23%);
     backdrop-filter: blur(10px);
-
-   
 }
 
 .navbar-global{
@@ -59,6 +57,7 @@ ul{
     width: 160px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .general-item{
@@ -116,7 +115,7 @@ select {
   @media (max-width: 1024px) {
    
     label{
-        display: block;
+        display: block!important;
         margin-left: 80%;
         color: white;
     }

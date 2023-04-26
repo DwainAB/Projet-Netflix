@@ -14,12 +14,13 @@ function DisplayData() {
     tmdbService.getPopularMovies()
       .then((response) => {
         setMovies(response.data.results);
-        console.log(response.data.results);
       })
       .catch((error) => {
         console.log(error);
       });
   }, []);
+
+
 
   const renderMovies = () => {
     const movieElements = [];

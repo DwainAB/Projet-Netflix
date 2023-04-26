@@ -5,9 +5,7 @@ import Error from "./Pages/Error"
 import Navbar from "./Components/Navbar/Navbar"
 import Footer from "./Components/Footer/Footer"
 import "../src/App.css"
-import React,{ useEffect, useState } from "react"
-import Channels from "./Components/Channels/Channels"
-
+import Search from "./Pages/Search"
 
 function App(){
   
@@ -22,6 +20,7 @@ function App(){
         <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/FilmSelected" element={<FilmSelected/>}/>
+          <Route path="/search" element={<Search/>}/>
           <Route path="*" element={<Error/>}/>
         </Routes>
       </div>
