@@ -3,6 +3,7 @@ import { API_KEY } from '../CallApi/Config.jsx';
 
 const baseUrl = 'https://api.themoviedb.org/3';
 
+
 export const tmdbService = {
   getPopularMovies: () => {
     return axios.get(`${baseUrl}/discover/movie?sort_by=popularity.desc&api_key=${API_KEY}`);
@@ -25,3 +26,7 @@ export const tmdbService = {
   
  
 };
+
+
+
+

@@ -2,7 +2,6 @@ import React from "react";
 import JobBiden from '../../assets/live-now-img1.png'
 import DonaldTrump from '../../assets/live-now-img2.png'
 import './Channels.css'
-import { AiOutlineArrowRight } from 'react-icons/fa';
 import TF1 from '../../assets/featured-img1.png'
 import M6 from '../../assets/featured-img-2.png'
 import CNN from '../../assets/featured-img3.png'
@@ -69,7 +68,7 @@ function Channels(){
                     </div>
 
                     <div className="featured-general-box1">
-                        <div className="featured-general-box1-img">
+                        <div className="featured-general-box1-img M6">
                             <img className="M6" src={M6} alt="" />
                         </div>
                         <div className="featured-general-box1-info">
