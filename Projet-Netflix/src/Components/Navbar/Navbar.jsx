@@ -11,7 +11,6 @@ function Navbar(){
         setShowGetAllMovies(!showGetAllMovies);
       };
 
-    
 
     return(
         <div className="container-navbar">

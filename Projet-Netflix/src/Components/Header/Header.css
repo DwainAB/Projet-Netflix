@@ -2,6 +2,21 @@
     color: white;
 }
 
+.movie_hover{
+    display: none;
+    position: absolute;
+}
+
+.movie_hover_show{
+    display: block;
+    position: absolute;
+}
+
+.movie_hover:hover{
+    display: block;
+   
+}
+
 .background_header{
     position: absolute;
     width: 100%;

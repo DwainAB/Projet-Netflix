@@ -12,6 +12,9 @@ function FilmInfo(){
     const location = useLocation();
     const searchParams = new URLSearchParams(location.search);
     const id = searchParams.get('id');
+    const data = searchParams.get('data');
+    const decodedData = decodeURIComponent(data);
+    const moviesSimilar = JSON.parse(decodedData);
     const [movies, setMovies] = useState([])
     let allMovies = []
 
@@ -19,12 +22,15 @@ function FilmInfo(){
     useEffect(() => {
         const fetchData = async () => {
           const keys = Object.keys(tmdbService);
-          const moviesResponse = await Promise.all(keys.map(key => tmdbService[key]()));
+          const moviesResponse = await Promise.all(keys.map(key => tmdbService[key](id)));
           const moviesData = moviesResponse.map(response => response.data);
           setMovies(moviesData);
         };
+
+        
         fetchData();
       }, []);
+
 
     for (let i = 0; i < movies.length; i++) {
         let results = movies[i].results;
@@ -32,6 +38,11 @@ function FilmInfo(){
         for (let j = 0; j < results.length; j++) {
            allMovies.push(results[j])        
         }       
+    }
+    
+    for (let h = 0; h < moviesSimilar.length; h++) {
+        allMovies.push(moviesSimilar[h])
+        
     }
 
     const searchObject = allMovies.find((element) => element.id === parseInt(id));

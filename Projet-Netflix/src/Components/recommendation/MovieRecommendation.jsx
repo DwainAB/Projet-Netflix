@@ -1,26 +1,33 @@
-import React, { useEffect, useState } from "react";
-import { tmdbService } from "../CallApi/CallApi";
+import React, { useState } from "react";
+import { useLocation } from "react-router-dom";
 import { API_IMG } from "../CallApi/Config";
 import { Link } from 'react-router-dom';
+import { API_KEY } from "../CallApi/Config";
 
 
 function MovieRecommendation(){
-  const [movies, setMovies] = useState([]);
-  const queryString = encodeURIComponent(JSON.stringify(movies));
 
-  useEffect(() => {
-    tmdbService.getHorrorMovies()
-      .then((response) => {
-        setMovies(response.data.results);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }, []);
+  const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+  const id = searchParams.get('id');
+
+  const [movies, setMovies] = useState([]);
+  
+  fetch(`https://api.themoviedb.org/3/movie/${id}/similar?api_key=${API_KEY}&language=en-US&page=1`)
+    .then(response => response.json())
+    .then(data => {
+      setMovies(data.results);
+    })
+    .catch(error => {
+      console.error('Erreur lors de la récupération des films similaires:', error);
+    });
+
+
+  const queryString = encodeURIComponent(JSON.stringify(movies));
 
   const renderMovies = () => {
     const movieElements = [];
-    for (let i = 0; i < 8; i++) {
+    for (let i = 0; i < movies.length; i++) {
       movieElements.push(
         <div className="movie" key={movies[i].id}>
           <Link to={`/FilmSelected?data=${queryString}&id=${movies[i].id}`}>
