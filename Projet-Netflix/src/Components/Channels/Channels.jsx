@@ -7,6 +7,9 @@ import M6 from '../../assets/featured-img-2.png'
 import CNN from '../../assets/featured-img3.png'
 
 function Channels(){
+    function handleClick() {
+        window.location.href = 'https://www.cnews.fr/le-direct';
+      }
     return(
         <div className="Container-live-now">
             <h2>Live Now</h2>
@@ -26,7 +29,7 @@ function Channels(){
                             is delivering an important and insightful </p>
                         </div>
                         <div className="live-now-left-info-div-button">
-                            <button className="live-now-left-info-button">
+                            <button className="live-now-left-info-button" onClick={handleClick}>
                                 Go Live
                             </button>
                         </div>
