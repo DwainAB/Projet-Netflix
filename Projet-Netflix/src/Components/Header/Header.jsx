@@ -25,7 +25,7 @@ function DisplayData() {
     const movieElements = [];
     for (let i = 0; i < movies.length; i++) {
       movieElements.push(
-        <div className="movie" key={movies[i].id}>
+        <div className="movie movie_container_hover" key={movies[i].id}>
           <div className="movie_hover">{movies[i].overview}</div>
           <Link to={`/FilmSelected?id=${movies[i].id}`}>
           <img
@@ -38,7 +38,26 @@ function DisplayData() {
     }
     return movieElements;
   };
+  
+  const movieElements = document.querySelectorAll('.movie_container_hover');
 
+  for (let i = 0; i < movieElements.length; i++) {
+    const movieElement = movieElements[i];
+    movieElement.addEventListener('mouseover', (event) => {
+      const movieHover = movieElement.querySelector('.movie_hover');
+      if (movieHover) {
+        movieHover.style.display = 'block';
+      }
+    });
+  
+    movieElement.addEventListener('mouseout', (event) => {
+      const movieHover = movieElement.querySelector('.movie_hover');
+      if (movieHover) {
+        movieHover.style.display = 'none';
+      }
+    });
+  }
+  
   return (
     <div className="container_header">
       {movies.length ? (

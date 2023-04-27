@@ -64,6 +64,8 @@ useEffect(() => {
     return movieElements;
   };
 
+  
+
   const affichage2 = () => {
     const movieElements = [];
     for (let i = 1; i < moviesHistory.length; i++) {
