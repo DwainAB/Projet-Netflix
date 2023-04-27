@@ -1,5 +1,5 @@
 import {Routes,Route, BrowserRouter} from "react-router-dom"
-import React, {useState} from "react"
+import React from "react"
 import Home from "./Pages/Home"
 import FilmSelected from "./Pages/FilmSelected"
 import Error from "./Pages/Error"

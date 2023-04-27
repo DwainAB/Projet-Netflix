@@ -11,17 +11,7 @@ function Navbar(){
         setShowGetAllMovies(!showGetAllMovies);
       };
 
-    useEffect(() => {
-        const navLinks = document.querySelectorAll('.navbar-link');
-        
-        navLinks.forEach(link => {
-          link.addEventListener('click', () => {
-            navLinks.forEach(otherLink => otherLink.classList.remove('active'));
-            link.classList.add('active');
-          });
-        });
-      
-      }, []);
+    
 
     return(
         <div className="container-navbar">
@@ -32,13 +22,13 @@ function Navbar(){
           <div className="navbar-global">
             <ul className="navbar-sections">
                 <li className="navbar-link active"><a href="/">Home</a></li>
-                <li className="navbar-link"><a href="/">TV</a></li>
-                <li className="navbar-link"><a href="/">EPG</a></li>
-                <li className="navbar-link"><a href="/">Catchup</a></li>
-                <li className="navbar-link"><a href="/">Movies</a></li>
-                <li className="navbar-link"><a href="/">TV-Shows</a></li>
-                <li className="navbar-link"><a href="/">Library</a></li>
-                <li className="navbar-link"><a href="/">Setting</a></li>
+                <li className="navbar-link"><a href="/error">TV</a></li>
+                <li className="navbar-link"><a href="/error">EPG</a></li>
+                <li className="navbar-link"><a href="/error">Catchup</a></li>
+                <li className="navbar-link"><a href="/error">Movies</a></li>
+                <li className="navbar-link"><a href="/error">TV-Shows</a></li>
+                <li className="navbar-link"><a href="/error">Library</a></li>
+                <li className="navbar-link"><a href="/error">Setting</a></li>
             </ul>
         
             <ul className="navbar-general">
