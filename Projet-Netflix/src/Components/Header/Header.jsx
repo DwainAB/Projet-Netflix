@@ -43,21 +43,21 @@ function DisplayData() {
     <div className="container_header">
       {movies.length ? (
         <>
-          <img className="background_header_mobile" src={API_IMG + movies[15].poster_path}alt=""/>
+          <img className="background_header_mobile" src={API_IMG + movies[18].poster_path}alt=""/>
           <div className="shadow"></div>
-          <img className="background_header" src={API_IMG + movies[15].backdrop_path}alt=""/>
+          <img className="background_header" src={API_IMG + movies[18].backdrop_path}alt=""/>
           <div className="header_info">
-            <h1 className="header_title">{movies[15].title}</h1>
+            <h1 className="header_title">{movies[18].title}</h1>
             <ul className="header_tags">
-              <li className="tag">{movies[15].release_date}</li>
-              <li className="tag">{movies[15].vote_average}</li>
-              <li className="tag">{movies[15].original_language}</li>
+              <li className="tag">{movies[18].release_date}</li>
+              <li className="tag">{movies[18].vote_average}</li>
+              <li className="tag">{movies[18].original_language}</li>
             </ul>
-            <p className="header_description">{movies[15].overview}</p>
+            <p className="header_description">{movies[18].overview}</p>
           </div>
 
           <div className="btn_info">
-            <Link className="btn" to={`/FilmSelected?data=${queryString}&id=${movies[15].id}`}>Play</Link>
+            <Link className="btn" to={`/FilmSelected?data=${queryString}&id=${movies[18].id}`}>Play</Link>
 			      <Link className="btn" to="/">Details</Link>
           </div>
 
