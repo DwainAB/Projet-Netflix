@@ -1,8 +1,15 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import "../Navbar/Navbar.css"
 import logo from "../../assets/logo.svg"
+import GetAllMovies from "../Search/Search";
 
 function Navbar(){
+
+    const [showGetAllMovies, setShowGetAllMovies] = useState(false);
+
+    const handleMoviesClick = () => {
+        setShowGetAllMovies(!showGetAllMovies);
+      };
 
     useEffect(() => {
         const navLinks = document.querySelectorAll('.navbar-link');
@@ -35,7 +42,7 @@ function Navbar(){
             </ul>
         
             <ul className="navbar-general">
-                <li className="navbar-link general-item"><span class="material-symbols-outlined">search</span></li>
+                <li className="navbar-link general-item"  onClick={handleMoviesClick}><span class="material-symbols-outlined" >search</span></li>
                 <li className="navbar-link general-item"><span class="material-symbols-outlined">notifications</span></li>
                 <li className="navbar-link general-item">
                     <select name="languages" id="languages">
@@ -45,6 +52,7 @@ function Navbar(){
                 </li>
             </ul>
         </div>
+        <GetAllMovies show={showGetAllMovies} />
 
         </div>
     )

@@ -1,4 +1,5 @@
 import {Routes,Route, BrowserRouter} from "react-router-dom"
+import React, {useState} from "react"
 import Home from "./Pages/Home"
 import FilmSelected from "./Pages/FilmSelected"
 import Error from "./Pages/Error"
@@ -8,14 +9,18 @@ import "../src/App.css"
 import Search from "./Pages/Search"
 
 function App(){
+  const [showElement, setShowElement] = useState(false);
+
+  const handleButtonClick = () => {
+    setShowElement(true);
+  }
   
 
 	return (
     
     <BrowserRouter>
-
     <div className="app">
-      <Navbar/>
+      <Navbar onButtonClick={handleButtonClick}/>
       <div className="global"> 
         <Routes>
           <Route path="/" element={<Home/>} />
