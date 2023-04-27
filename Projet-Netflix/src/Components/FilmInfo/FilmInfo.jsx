@@ -3,44 +3,40 @@ import { useLocation } from 'react-router-dom';
 import { API_IMG } from "../CallApi/Config";
 import { Link } from "react-router-dom";
 import Heart from "../../assets/coeur.png"
+import {tmdbService} from "../CallApi/CallApi"
 import "./FilmInfo.css"
-import axios from 'axios';
+
 
 function FilmInfo(){
 
     const location = useLocation();
     const searchParams = new URLSearchParams(location.search);
-    const queryString = searchParams.get('data');
     const id = searchParams.get('id');
-    const myObject = JSON.parse(decodeURIComponent(queryString));
-    const searchObject = myObject.find((element) => element.id === parseInt(id));
+    const [movies, setMovies] = useState([])
+    let allMovies = []
 
-    const [translatedOverview, setTranslatedOverview] = useState("");
 
     useEffect(() => {
-        if (searchObject) {
-            axios.get(`https://api.themoviedb.org/3/movie/${id}?api_key=3c55b27b9e2cf84477c1a7e17da7a0bf&language=fr-FR`)
-            .then(response => {
-                const originalOverview = response.data.overview;
-                axios.post('https://api.themoviedb.org/3/trending/all/day', null, {
-                    params: {
-                        api_key: '3c55b27b9e2cf84477c1a7e17da7a0bf',
-                        query: originalOverview
-                    },
-                    headers: {
-                        'Content-Type': 'application/json;charset=utf-8'
-                    }
-                }).then(response => {
-                    setTranslatedOverview(response.data.translations[0].translated_text);
-                }).catch(error => {
-                    console.error(error);
-                });
-            })
-            .catch(error => {
-                console.error(error);
-            });
-        }
-    }, [id, searchObject]);
+        const fetchData = async () => {
+          const keys = Object.keys(tmdbService);
+          const moviesResponse = await Promise.all(keys.map(key => tmdbService[key]()));
+          const moviesData = moviesResponse.map(response => response.data);
+          setMovies(moviesData);
+        };
+        fetchData();
+      }, []);
+
+    for (let i = 0; i < movies.length; i++) {
+        let results = movies[i].results;
+
+        for (let j = 0; j < results.length; j++) {
+           allMovies.push(results[j])        
+        }       
+    }
+
+    const searchObject = allMovies.find((element) => element.id === parseInt(id));
+    console.log(allMovies);
+
 
     let filmElement = null;
 
@@ -73,7 +69,7 @@ function FilmInfo(){
                             <li className="info_filmInfo_tag">{searchObject.original_language}</li>
                         </div>
 
-                        <p className="info_filmInfo_text">{translatedOverview || searchObject.overview}</p>
+                        <p className="info_filmInfo_text">{searchObject.overview}</p>
 
                     </div>
 

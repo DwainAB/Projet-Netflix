@@ -7,7 +7,9 @@
 }
 
 body{
-    background: url("../src/assets/Fond.svg");
+    background: url("./assets/test.png");
+    /* background: rgb(26,41,128);
+    background: linear-gradient(180deg, rgba(26,41,128,1) 0%, rgba(0,0,0,1) 51%, rgba(33,63,91,1) 100%); */
     background-size: cover;
     background-repeat: no-repeat;
 }

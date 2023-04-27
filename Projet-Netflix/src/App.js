@@ -6,26 +6,19 @@ import Error from "./Pages/Error"
 import Navbar from "./Components/Navbar/Navbar"
 import Footer from "./Components/Footer/Footer"
 import "../src/App.css"
-import Search from "./Pages/Search"
 
-function App(){
-  const [showElement, setShowElement] = useState(false);
 
-  const handleButtonClick = () => {
-    setShowElement(true);
-  }
-  
+function App(){  
 
 	return (
     
     <BrowserRouter>
     <div className="app">
-      <Navbar onButtonClick={handleButtonClick}/>
+      <Navbar />
       <div className="global"> 
         <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/FilmSelected" element={<FilmSelected/>}/>
-          <Route path="/search" element={<Search/>}/>
           <Route path="*" element={<Error/>}/>
         </Routes>
       </div>

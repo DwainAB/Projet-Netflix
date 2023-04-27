@@ -27,7 +27,7 @@ function DisplayData() {
     for (let i = 0; i < 8; i++) {
       movieElements.push(
         <div className="movie" key={movies[i].id}>
-          <Link to={`/FilmSelected?data=${queryString}&id=${movies[i].id}`}>
+          <Link to={`/FilmSelected?id=${movies[i].id}`}>
           <img
             src={API_IMG + movies[i].poster_path}
             alt={movies[i].title}
