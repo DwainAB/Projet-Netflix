@@ -64,8 +64,16 @@ function GetAllMovies(props) {
          </div>`; 
   }
 
+  let btnClose = document.querySelector('.btn-close')
+  let container_search_page = document.querySelector('.container_search_page')
+
+  btnClose?.addEventListener('click', () =>{
+    container_search_page.style.display = 'none';
+  })
+
   return (
     <div className='container_search_page' style={{ display: props.show ? "block" : "none" }}>
+      <span className='btn-close'>X</span>
       <label htmlFor="search_bar"></label>
       <input type="search" id="search_bar" placeholder='Search' onChange={handleSearchTerm}/>
       <div  id="movies_search" dangerouslySetInnerHTML={{ __html: html }}  />

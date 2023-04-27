@@ -1,6 +1,7 @@
 .accordion {
   display: flex;
   flex-direction: column;
+  z-index: -9999;
 }
 
 .accordion-item {
@@ -16,8 +17,8 @@
   cursor: pointer;
   position: relative;
   font-size: 20px;
-  font-family: Montserrat;
   font-weight: bold;
+  z-index: -5;
 }
 
 .accordion-content {
