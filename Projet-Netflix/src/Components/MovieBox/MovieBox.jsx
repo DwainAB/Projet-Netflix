@@ -66,7 +66,7 @@ useEffect(() => {
 
   const affichage2 = () => {
     const movieElements = [];
-    for (let i = 1; i < 9; i++) {
+    for (let i = 1; i < moviesHistory.length; i++) {
       movieElements.push(
         <div className="movie" key={moviesHistory[i].id}>
           <Link to={`/FilmSelected?data=${queryStringHistory}&id=${moviesHistory[i].id}`}>
@@ -83,7 +83,7 @@ useEffect(() => {
 
   const renderMovies = () => {
     const movieElements = [];
-    for (let i = 0; i < 8; i++) {
+    for (let i = 0; i < movies.length; i++) {
       movieElements.push(
         <div className="movie" key={movies[i].id}>
           <Link to={`/FilmSelected?data=${queryString}&id=${movies[i].id}`}>

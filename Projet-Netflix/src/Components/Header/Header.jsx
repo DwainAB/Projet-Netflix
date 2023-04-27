@@ -21,12 +21,12 @@ function DisplayData() {
   }, []);
 
 
-
   const renderMovies = () => {
     const movieElements = [];
-    for (let i = 0; i < 8; i++) {
+    for (let i = 0; i < movies.length; i++) {
       movieElements.push(
         <div className="movie" key={movies[i].id}>
+          <div className="movie_hover">{movies[i].overview}</div>
           <Link to={`/FilmSelected?id=${movies[i].id}`}>
           <img
             src={API_IMG + movies[i].poster_path}
