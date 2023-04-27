@@ -22,9 +22,6 @@ export const tmdbService = {
   },
   getHistoryMovies: (id) => {
     return axios.get(`${baseUrl}/discover/movie?api_key=${API_KEY}&with_genres=36`);
-  },
-  getSimilar: (id) => {
-    return axios.get(`${baseUrl}/movie/${id}/similar?api_key=${API_KEY}&language=en-US&page=1`);
   }
   
 };

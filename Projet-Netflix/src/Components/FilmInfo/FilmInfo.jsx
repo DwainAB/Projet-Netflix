@@ -22,15 +22,16 @@ function FilmInfo(){
     useEffect(() => {
         const fetchData = async () => {
           const keys = Object.keys(tmdbService);
-          const moviesResponse = await Promise.all(keys.map(key => tmdbService[key](id)));
+          const lastKeyIndex = keys.length - 1;
+          keys.splice(lastKeyIndex, 1); // Retirer le dernier élément du tableau
+          const moviesResponse = await Promise.all(keys.map(key => tmdbService[key]()));
           const moviesData = moviesResponse.map(response => response.data);
-          setMovies(moviesData);
+          setMovies(moviesData);;
         };
-
-        
         fetchData();
       }, []);
 
+      console.log(movies);
 
     for (let i = 0; i < movies.length; i++) {
         let results = movies[i].results;

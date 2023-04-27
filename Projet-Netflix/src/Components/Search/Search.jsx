@@ -13,7 +13,7 @@ function GetAllMovies(props) {
       const keys = Object.keys(tmdbService);
       const moviesResponse = await Promise.all(keys.map(key => tmdbService[key]()));
       const moviesData = moviesResponse.map(response => response.data);
-      setMovies(moviesData);
+      setMovies(moviesData);;
     };
     fetchData();
   }, []);
@@ -29,7 +29,7 @@ function GetAllMovies(props) {
     );
    
     let html = '';
-    const queryString = encodeURIComponent(JSON.stringify(filteredMovies))
+    let queryString = encodeURIComponent(JSON.stringify(filteredMovies))
     for (let l = 0; l < filteredMovies.length && l < 10; l++) {
       html += `
         <div class="search-bar-item">
@@ -55,11 +55,12 @@ function GetAllMovies(props) {
     }
   }
 
+  
   for (let h = 0; h < nbMovie.length && h < 10; h++){
      html += `
          <div class="search-bar-item">
            <img class="movie_search" src="${API_IMG}${nbMovie[h].poster_path}"
-           <h3>${nbMovie[h].title}</h3>
+           <h3>${nbMovie[h].title}</h3> 
          </div>`; 
   }
 
