@@ -203,8 +203,8 @@ function Music (){
                     <div className="card-wrapper niro">
                         <img src={niro} alt="" />
                         <div className="info-wrapper">
-                            <h1>Changement de proprietaire</h1>
-                            <span>T'es pas le lion le plus fier de la troupe, t'es pas l'stylo le plus cher de la trousse</span>
+                            <h1>Papa fait le pitre</h1>
+                            <span>" T'es pas le lion le plus fier de la troupe, t'es pas l'stylo le plus cher de la trousse "</span>
                             <a className="button-wrapper" onClick={() => {
                                 if (selectedMusic4 && isPlaying4) {
                                     stopMusic4();
