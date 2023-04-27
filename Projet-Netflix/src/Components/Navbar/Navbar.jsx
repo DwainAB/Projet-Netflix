@@ -27,7 +27,7 @@ function Navbar(){
                 <li className="navbar-link"><a href="/error">Catchup</a></li>
                 <li className="navbar-link"><a href="/error">Movies</a></li>
                 <li className="navbar-link"><a href="/error">TV-Shows</a></li>
-                <li className="navbar-link"><a href="/error">Library</a></li>
+                <li className="navbar-link"><a href="/Accordeon">F.A.Q</a></li>
                 <li className="navbar-link"><a href="/error">Setting</a></li>
             </ul>
         

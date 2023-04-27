@@ -6,6 +6,7 @@ import Error from "./Pages/Error"
 import Navbar from "./Components/Navbar/Navbar"
 import Footer from "./Components/Footer/Footer"
 import "../src/App.css"
+import Accordeonn from "./Pages/AccordeonPage"
 
 
 function App(){  
@@ -20,6 +21,7 @@ function App(){
           <Route path="/" element={<Home/>} />
           <Route path="/FilmSelected" element={<FilmSelected/>}/>
           <Route path="*" element={<Error/>}/>
+          <Route path="/Accordeon" element={<Accordeonn/>}/>
         </Routes>
       </div>
         <Footer/>
