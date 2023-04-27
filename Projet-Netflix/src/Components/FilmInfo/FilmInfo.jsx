@@ -9,21 +9,21 @@ import "./FilmInfo.css"
 
 function FilmInfo(){
 
+    //Récupération des éléments dans l'url
     const location = useLocation();
     const searchParams = new URLSearchParams(location.search);
-    const id = searchParams.get('id');
-    const data = searchParams.get('data');
-    const decodedData = decodeURIComponent(data);
-    const moviesSimilar = JSON.parse(decodedData);
-    const [movies, setMovies] = useState([])
-    let allMovies = []
+    const id = searchParams.get('id'); 
+    const data = searchParams.get('data'); 
+    const decodedData = decodeURIComponent(data); //Permet de décoder la chaîne de charactère et de convertir en objet JavaScript
+    const moviesSimilar = JSON.parse(decodedData); //Permet de convertir la chaîne JSON en un objet JavaScript
+    const [movies, setMovies] = useState([])//Initialisation de movies en tableau vide
+    let allMovies = [] //Contient tout les films
 
 
+    //Parcours de l'objet tmdbService pour faire un fetch a chaques méthodes et stocké réponse dans movies
     useEffect(() => {
         const fetchData = async () => {
           const keys = Object.keys(tmdbService);
-          const lastKeyIndex = keys.length - 1;
-          keys.splice(lastKeyIndex, 1); // Retirer le dernier élément du tableau
           const moviesResponse = await Promise.all(keys.map(key => tmdbService[key]()));
           const moviesData = moviesResponse.map(response => response.data);
           setMovies(moviesData);;
@@ -31,27 +31,27 @@ function FilmInfo(){
         fetchData();
       }, []);
 
-      console.log(movies);
-
-    for (let i = 0; i < movies.length; i++) {
+      //Parcours des films de movies et moviesSimilar et les envois dans AllMovies pour n'avoir qu'un seul tableau
+    for (let i = 0; i < movies?.length; i++) {
         let results = movies[i].results;
 
-        for (let j = 0; j < results.length; j++) {
+        for (let j = 0; j < results?.length; j++) {
            allMovies.push(results[j])        
         }       
     }
-    
-    for (let h = 0; h < moviesSimilar.length; h++) {
+
+    for (let h = 0; h < moviesSimilar?.length; h++) {
         allMovies.push(moviesSimilar[h])
         
     }
 
+    //Recherche dans AllMovies l'objet qui à la même id que celui de l'url
     const searchObject = allMovies.find((element) => element.id === parseInt(id));
-    console.log(allMovies);
 
-
+    //Déclaration de l'élément qui stockera notre html
     let filmElement = null;
 
+    //Si l'objet est trouvé : 
     if (searchObject) {
         
         filmElement = (

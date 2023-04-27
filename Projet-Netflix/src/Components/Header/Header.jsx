@@ -8,8 +8,9 @@ import { Link } from 'react-router-dom';
 
 function DisplayData() {
   const [movies, setMovies] = useState([]);
-  const queryString = encodeURIComponent(JSON.stringify(movies));
+  const queryString = encodeURIComponent(JSON.stringify(movies)); //Permet convertir movies en une chaîne JSON.
 
+  //Récupération des films populaires et les mets dans movies
   useEffect(() => {
     tmdbService.getPopularMovies()
       .then((response) => {
@@ -20,7 +21,7 @@ function DisplayData() {
       });
   }, []);
 
-
+//Permet d'afficher les filmes qu'il y a dans movies
   const renderMovies = () => {
     const movieElements = [];
     for (let i = 0; i < movies.length; i++) {
@@ -39,8 +40,11 @@ function DisplayData() {
     return movieElements;
   };
   
+  //Permet de faire l'effet de hover sur les films
+  //Récupère les éléments qui ont la classe movie_container_hover
   const movieElements = document.querySelectorAll('.movie_container_hover');
 
+  //Parcours des éléments qui ont cette classe et fait l'effet de survol sur son movie_hover
   for (let i = 0; i < movieElements.length; i++) {
     const movieElement = movieElements[i];
     movieElement.addEventListener('mouseover', (event) => {
@@ -58,6 +62,8 @@ function DisplayData() {
     });
   }
   
+  //Une condition est mis au debut du return pour éxécuter le code seulement si movies n'est pas vide
+  //Sinon Chargement en cours...
   return (
     <div className="container_header">
       {movies.length ? (
