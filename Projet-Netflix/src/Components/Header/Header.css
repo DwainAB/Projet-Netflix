@@ -121,6 +121,18 @@
     align-items: center;
 }
 
+@media (max-width:1000px) {
+    .movie_hover{
+        bottom: 280px;
+    }
+}
+
+@media (max-width:730px) {
+    .movie_hover{
+        bottom: 420px;
+    }
+}
+
 @media (max-width: 730px) {
     .background_header_mobile{
         display: block;

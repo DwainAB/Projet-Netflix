@@ -1,17 +1,21 @@
-import React, {useEffect, useState} from "react";
+import React, { useState} from "react";
 import "../Navbar/Navbar.css"
 import logo from "../../assets/logo.svg"
 import GetAllMovies from "../Search/Search";
 
 function Navbar(){
 
+    //Permet lors du clique sur le bouton recherche d'ouvrir ou fermer le menu
     const [showGetAllMovies, setShowGetAllMovies] = useState(false);
 
+    //Fonction lors du clique sur le logo de recherche, permet d'envoyer la différence de ce qui est stocké dans showGetAllMovies
     const handleMoviesClick = () => {
         setShowGetAllMovies(!showGetAllMovies);
       };
 
 
+      //GetAllMovies est appelé avec une props "show"
+      //Ce qui nous permettra de géré l'état du menu dans son fichier
     return(
         <div className="container-navbar">
             <img src={logo} alt="logo du site" />
