@@ -129,7 +129,7 @@
 
 @media (max-width:730px) {
     .movie_hover{
-        bottom: 420px;
+        display: none;
     }
 }
 
