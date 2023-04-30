@@ -2,11 +2,9 @@ import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
 import { API_IMG } from "../CallApi/Config";
 import { Link } from 'react-router-dom';
-import { API_KEY } from "../CallApi/Config";
-
+import { API_KEY } from "../CallApi/Config";  
 
 function MovieRecommendation(){
-
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
   const id = searchParams.get('id');
