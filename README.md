@@ -19,3 +19,6 @@ Nous tenons à remercier The Movie DB pour la mise à disposition de leur base d
 Restream est publié sous la licence MIT.
 
 Si vous avez des questions ou des commentaires sur Restream, vous pouvez nous contacter directement par e-mail à l'adresse suivante : d_abrivard@hetic.eu ou a_haddar@hetic.eu .
+
+Voici le lien du site :
+https://projet-netflix-blond.vercel.app/
