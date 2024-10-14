@@ -5,6 +5,7 @@ import Channels from '../Components/Channels/Channels';
 import WebsiteAdvantage from '../Components/WebsiteAdvantage/WebsiteAdvantage';
 import GetAllMovies from '../Components/Search/Search';
 import Music from '../Components/Music/Music';
+import UserCRUD from '../Components/usersCrud';
 
 function Home(){
  
@@ -16,6 +17,7 @@ function Home(){
             <MovieBox/>
             <Music/>
             <WebsiteAdvantage/>
+            <UserCRUD/>
         </div>
 
     )
