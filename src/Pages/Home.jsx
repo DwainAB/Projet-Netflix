@@ -6,6 +6,7 @@ import WebsiteAdvantage from '../Components/WebsiteAdvantage/WebsiteAdvantage';
 import GetAllMovies from '../Components/Search/Search';
 import Music from '../Components/Music/Music';
 import UserCRUD from '../Components/usersCrud';
+import ProductCRUD from '../Components/productCrud';
 
 function Home(){
  
@@ -18,6 +19,7 @@ function Home(){
             <Music/>
             <WebsiteAdvantage/>
             <UserCRUD/>
+            <ProductCRUD/>
         </div>
 
     )
